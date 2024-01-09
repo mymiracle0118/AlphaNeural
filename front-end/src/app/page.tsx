@@ -13,14 +13,14 @@ export default function Home() {
           </div>
           <Link
             href="/auth/signup"
-            className='common-btn h-[48px] mt-[60px]'
+            className='common-btn py-[12px] mt-[60px]'
           >Create Account</Link>
           <div className='flex flex-wrap justify-between items-center text-white mt-[30px]'>
             <div className='split-line w-2/5'></div>
             <div>or</div>
             <div className='split-line w-2/5'></div>
           </div>
-          <a className='common-btn h-[48px] mt-[30px]'>Create Account with Google</a>
+          <a className='common-btn py-[12px] mt-[30px]'><img src='images/ic-google.png' className='ic-google h-[20px] w-[20px] my-auto mr-[5px]' />Create Account with Google</a>
           <div className='w-full text-[14px] text-center text-white mt-[40px]'>
             <span>Already have an account?</span>
             <Link
