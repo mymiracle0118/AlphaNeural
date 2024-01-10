@@ -28,7 +28,7 @@ export class AuthService {
       });
   };
 
-  getMe = (userId: string) => {
+  getCurrentUser = (userId: string) => {
     return this.instance
       .get(`/users/${userId}`, {
         headers: getAuthorizationHeader(),

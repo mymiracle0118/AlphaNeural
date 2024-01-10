@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useLogin } from "@/hooks/auth/useLogin";
 
@@ -35,20 +36,20 @@ export default function SignInPage() {
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="common-input w-full my-4"
+            className="common-input w-full mb-4"
             placeholder="johndoe@gmail.com"
           />
           <label className="text-[12px]">Enter your password</label>
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="common-input w-full my-4"
+            className="common-input w-full mb-4"
             placeholder="Type your password"
             type="password"
           />
           <button
             onClick={onSubmit}
-            className="common-btn w-full h-[48px] mt-[30px]"
+            className="common-btn w-full py-[12px] mt-[30px]"
           >
             Log in
           </button>
@@ -59,9 +60,9 @@ export default function SignInPage() {
           </div>
           <button
             // onClick={onSubmit}
-            className="common-btn w-full h-[48px] mt-[30px]"
+            className="common-btn w-full py-[16px] mt-[30px]"
           >
-            G
+            <Image src="/images/ic-google.svg" alt="google icon" width={18} height={18}/>
           </button>
           <div className='w-full text-[14px] text-center text-white mt-[70px]'>
             <span>Don't have an account yet?</span>
