@@ -25,7 +25,7 @@ export default function Home() {
             <span>Already have an account?</span>
             <Link
               href="/auth/signin"
-              className='cursor-pointer ml-[5px]'
+              className="cursor-pointer ml-[5px]"
             >Log in</Link>
           </div>
         </div>
