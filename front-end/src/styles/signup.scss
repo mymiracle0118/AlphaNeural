@@ -1,6 +1,8 @@
 .signup {
   background-color: $bg-primary;
   .img-panel {
-    background-color: $bg-third;
+    background-image: url("../../public/images/bg-signup.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

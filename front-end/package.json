@@ -15,7 +15,9 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.49.3"
+    "react-hook-form": "^7.49.3",
+    "react-social-login-buttons": "^3.9.1",
+    "reactjs-social-login": "^2.6.3"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",

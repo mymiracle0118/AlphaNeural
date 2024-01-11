@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { useSignup } from "@/hooks/auth/useSignup";
 
 export default function SingUpPage() {
 
@@ -10,12 +11,19 @@ export default function SingUpPage() {
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [password, setPassword] = useState("");
+  const { signup } = useSignup();
+  const router = useRouter();
   
   const onSubmit = () => {
     if (!name || !email || !password || !company) {
       alert("Please enter information");
     } else {
-
+      signup(name, company, email, password)
+        .then((res) => {
+          // router.push("/profile");
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
     }
   }
 
