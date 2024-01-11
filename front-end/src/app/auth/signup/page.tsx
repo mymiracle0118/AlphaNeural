@@ -20,8 +20,7 @@ export default function SingUpPage() {
     } else {
       signup(name, company, email, password)
         .then((res) => {
-          // router.push("/profile");
-          console.log(res);
+          router.push("/auth/signin");
         })
         .catch((err) => console.log(err));
     }

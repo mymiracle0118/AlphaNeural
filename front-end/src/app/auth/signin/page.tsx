@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { useLogin } from "@/hooks/auth/useLogin";
 import { useCallback } from "react";
+import { Checkbox } from "@mui/material";
+import { FormControlLabel } from "@mui/material";
 // import { LoginSocialGoogle, IResolveParams } from "reactjs-social-login";
 import { GoogleLoginButton } from "react-social-login-buttons";
 // import { google } from "googleapis";
@@ -67,7 +69,7 @@ export default function SignInPage() {
       login(email, password)
         .then((res) => {
           console.log(res);
-          router.push("/profile");
+          // router.push("/profile");
         })
         .catch((e) => alert(e));
     }
@@ -99,9 +101,13 @@ export default function SignInPage() {
             placeholder="Type your password"
             type="password"
           />
+          <div className="flex">
+            <FormControlLabel control={<Checkbox />} label="Remeber Me" />
+            <Link href="" className="my-auto ml-auto">Forgot Password?</Link>
+          </div>
           <button
             onClick={onSubmit}
-            className="common-btn w-full py-[12px] mt-[30px]"
+            className="common-btn w-full py-[12px]"
           >
             Log in
           </button>
