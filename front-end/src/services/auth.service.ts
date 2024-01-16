@@ -11,24 +11,46 @@ export class AuthService {
     });
   }
 
-  login = (username: string, password: string) => {
+  login = (email: string, password: string) => {
     return this.instance
       .post("/login", {
-        username,
-        password,
+        emailAddress: email,
+        password: password,
       })
       .then((res) => {
-        return {
-          username: res.data.username,
-          avatar: res.data.avatar,
-          id: res.data.userId,
-          accessToken: res.data.access_token,
-          expiredAt: res.data.expiredAt,
-        };
+        // return {
+        //   username: res.data.username,
+        //   avatar: res.data.avatar,
+        //   id: res.data.userId,
+        //   accessToken: res.data.access_token,
+        //   expiredAt: res.data.expiredAt,
+        // };
+        return res.data;
       });
   };
 
-  getMe = (userId: string) => {
+  signup = (userName: string, companyName: string, emailAddress:string, password: string) => {
+    return this.instance
+      .post("/signup", {
+        userName: userName,
+        companyName: companyName,
+        emailAddress: emailAddress,
+        password: password,
+        confirmPassword: password,
+      })
+      .then((res) => {
+        // return {
+        //   username: res.data.username,
+        //   avatar: res.data.avatar,
+        //   id: res.data.userId,
+        //   accessToken: res.data.access_token,
+        //   expiredAt: res.data.expiredAt,
+        // }
+        return res.data;
+      });
+  };
+
+  getCurrentUser = (userId: string) => {
     return this.instance
       .get(`/users/${userId}`, {
         headers: getAuthorizationHeader(),
