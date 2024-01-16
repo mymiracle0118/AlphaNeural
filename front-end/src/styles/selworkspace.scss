@@ -1,0 +1,10 @@
+.sel-workspace {
+  background-image: url('/images/bg_welcome.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .mainboard {
+    background-color: $bg-secondary;
+    border-radius: 30px;
+  }
+}
